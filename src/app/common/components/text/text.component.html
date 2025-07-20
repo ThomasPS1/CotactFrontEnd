@@ -1,0 +1,20 @@
+<div class="relative mb-4 w-full mt-10">
+  <label
+    [for]="id"
+    class="absolute left-5 -top-2 bg-white text-gray-500 text-sm font-medium px-2"
+  >
+    {{ label }}
+  </label>
+  <input
+    class="w-full border border-gray-300 px-4 py-2 rounded bg-transparent outline-none focus:ring-1 focus:ring-gray-400 read-only:cursor-pointer disabled:opacity-50"
+    type="text"
+    [name]="name"
+    [id]="id"
+    [value]="value"
+    (blur)="onTouched()"
+    (input)="onInput($event)"
+    [disabled]="disabled"
+    [placeholder]="placeholder"
+    [readonly]="readonly"
+  />
+</div>
